@@ -28,7 +28,11 @@ eureka:
     registry-fetch-interval-seconds: 10
     instance-info-replication-interval-seconds: 10
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_DEFAULTZONE_URL:http://localhost:8761/eureka}
       
+EUREKA_DEFAULTZONE_URL: http://localhost:8761/eureka
+
+
+
 
         
