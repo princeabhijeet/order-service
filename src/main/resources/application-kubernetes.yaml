@@ -6,7 +6,7 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:sqlserver://host.docker.internal:1433;encrypt=true;trustServerCertificate=true;databaseName=OrderDB
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=OrderDB
     username: SA
     password: Prince@10
   jpa:
@@ -20,7 +20,7 @@ spring:
         
 eureka:
   instance:
-    hostname: ${POD_NAME}.eureka
+    #hostname: ${POD_NAME}.eureka
     prefer-ip-address: false 
   client:
     fetch-registry: true
@@ -30,7 +30,7 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_DEFAULTZONE_URL:http://localhost:8761/eureka}
       
-EUREKA_DEFAULTZONE_URL: http://${eureka.instance.hostname}:8761/eureka
+EUREKA_DEFAULTZONE_URL: http://eureka-0.eureka:8761/eureka/,http://eureka-1.eureka:8761/eureka/,http://eureka-2.eureka:8761/eureka/
 
 
 
