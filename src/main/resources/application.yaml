@@ -6,7 +6,7 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=OrderDB
+    url: jdbc:sqlserver://Princes-MacBook-Pro.local:1433;encrypt=true;trustServerCertificate=true;databaseName=OrderDB
     username: SA
     password: Prince@10
   jpa:
