@@ -20,18 +20,18 @@ spring:
         
 eureka:
   instance:
-    #hostname: ${spring.application.name}
+    hostname: host.docker.internal
     prefer-ip-address: false 
   client:
     fetch-registry: true
     register-with-eureka: true
-    registry-fetch-interval-seconds: 10
-    instance-info-replication-interval-seconds: 10
+    registry-fetch-interval-seconds: 30
+    instance-info-replication-interval-seconds: 30
     service-url:
       defaultZone: ${EUREKA_DEFAULTZONE_URL:http://localhost:8761/eureka}
       
-EUREKA_DEFAULTZONE_URL: http://host.docker.internal:8761/eureka
+EUREKA_DEFAULTZONE_URL: http://${eureka.instance.hostname}:8761/eureka
 
 
 
-        
+
