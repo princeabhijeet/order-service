@@ -25,8 +25,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    registry-fetch-interval-seconds: 30
-    instance-info-replication-interval-seconds: 30
+    registry-fetch-interval-seconds: 10
+    instance-info-replication-interval-seconds: 10
     service-url:
       defaultZone: ${EUREKA_DEFAULTZONE_URL:http://localhost:8761/eureka}
       
